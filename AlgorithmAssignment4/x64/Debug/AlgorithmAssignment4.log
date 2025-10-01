@@ -1,0 +1,3 @@
+﻿  AlgorithmAssignment4.cpp
+C:\Users\saras\source\repos\AlgorithmAssignment4\AlgorithmAssignment4.cpp(46,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  AlgorithmAssignment4.vcxproj -> C:\Users\saras\source\repos\AlgorithmAssignment4\x64\Debug\AlgorithmAssignment4.exe
