@@ -6,12 +6,12 @@
 #include <chrono>
 
 //Initializing arrays of sizes for the sort
-// 100 000
-// 1 000 000
-// 10 000 000
-float* bigArray = new float[100000];
-float* biggerArray = new float[1000000];
-float* biggestArray = new float[10000000];
+// 1000
+// 10000
+// 100000
+float* bigArray = new float[1000];
+float* biggerArray = new float[10000];
+float* biggestArray = new float[100000];
 
 void swap(float& a, float& b)
 {
@@ -20,13 +20,13 @@ void swap(float& a, float& b)
     b = temp;
 
 }
-void simpleSort(float* a, int n) 
+void simpleSort(float* a, int n)
 {
-    for (int i = 0; i < n; ++i) 
+    for (int i = 0; i < n; ++i)
     {
-        for (int j = 0; j < n; ++j) 
+        for (int j = 0; j < n; ++j)
         {
-            if (a[j] < a[i]) 
+            if (a[j] < a[i])
             {
                 swap(a[j], a[i]);
             }
@@ -48,7 +48,7 @@ int main()
     InitializeArrayWithData(biggerArray, 10000);
     InitializeArrayWithData(biggestArray, 100000);
 
-   
+
     std::cout << "Sorting the array with 1000 values" << std::endl;
     auto start = std::chrono::steady_clock::now();
     simpleSort(bigArray, 1000);
@@ -77,8 +77,8 @@ int main()
     delete[] biggestArray;
 
     //RESULTS
-    // Array with 1000 values took 4 milliseconds
-    // 10 000 took 187 milliseconds
-    // 100 000 took 23090 milliseconds
+    // Array with 1000 values took 10 milliseconds
+    // 10 000 took 111 milliseconds
+    // 100 000 took 10577 milliseconds
     //This implies O(n^2). The algorithm is really slow for sorting arrays with many values
 }
