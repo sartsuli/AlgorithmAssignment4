@@ -80,5 +80,12 @@ int main()
     // Array with 1000 values took 10 milliseconds
     // 10 000 took 111 milliseconds
     // 100 000 took 10577 milliseconds
-    //This implies O(n^2). The algorithm is really slow for sorting arrays with many values
+    //This implies O(n) which is odd because I thought it would be O(n^2). I actually got results on another PC:
+    // Array with 1000 values took 4 milliseconds
+    // 10 000 took 187 milliseconds
+    // 100 000 took 23090 milliseconds
+    // Ir's probably bc I used values that are too small (I didn't have time to wait for the bigger values to execute)
+
+
+
 }
